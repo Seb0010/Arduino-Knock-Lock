@@ -15,7 +15,7 @@ int knockVal;
 int switchVal;
 
 const int quietKnock = 10;
-const int loudKnock = 100;
+const int loudKnock = 100;   //constants to use as thresholds for the knocking maximum and minimum levels
 
 boolean locked = false;
 int numberOfKnocks = 0;
@@ -33,7 +33,7 @@ Serial.print("The box is unlocked!");
 }
 
 void loop() {
-if (locked == false){
+if (locked == false){     // Checking if the box is locked or not. If it's locked read the switch value
   switchVal = digitalRead(switchPin);
 
 if (switchVal == HIGH){
